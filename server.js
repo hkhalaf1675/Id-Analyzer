@@ -12,11 +12,15 @@ app.get('/', (req, res) => {
 app.post('/docu-pass', (req, res) => {
     const {success, transactionId, customData} = req.body;
     console.log(`----------------------`);
-    console.log(req.body)
+    
     if(success){
+        console.log('success ....');
+        
         return res.status(200).json({success});
     }
     else{
+        console.log('fail ....');
+
         return res.status(400).json({success});
     }
 });
