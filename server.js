@@ -10,10 +10,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/docu-pass', (req, res) => {
-    const {success, transactionId, customData} = req.body;
+    const {decision, transactionId, customData} = req.body;
     console.log(`----------------------`);
     console.log(req.body);
-    if(success){
+    if(decision && decision === 'accept'){
         console.log('success ....');
         
         return res.status(200).json({success});
