@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 app.post('/docu-pass', (req, res) => {
     const {success, transactionId, customData} = req.body;
     console.log(`----------------------`);
-    
+    console.log(req.body);
     if(success){
         console.log('success ....');
         
