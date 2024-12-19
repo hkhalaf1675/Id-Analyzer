@@ -16,12 +16,12 @@ app.post('/docu-pass', (req, res) => {
     if(decision && decision === 'accept'){
         console.log('success ....');
         
-        return res.status(200).json({success});
+        return res.status(200).json({decision});
     }
     else{
         console.log('fail ....');
 
-        return res.status(400).json({success});
+        return res.status(400).json({decision});
     }
 });
 
