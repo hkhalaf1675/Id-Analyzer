@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 
 app.post('/docu-pass', (req, res) => {
     const {success, transactionId, customData} = req.body;
+    console.log(`Success: ${success}`);
     console.log(`transication id: ${transactionId}`);
     console.log(`custom data: ${customData}`);
     if(success){
